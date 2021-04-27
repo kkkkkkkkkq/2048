@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            onKeyPressed="#keyboardPress" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #432765;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.Controller">
+   <FlowPane fx:id="flowPane" hgap="5.0" onKeyPressed="#keyboardPress" prefHeight="400.0" prefWidth="450.0" vgap="5.0"/>
+   <ImageView fitHeight="99.0" fitWidth="103.0" layoutX="465.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@images/logo.png"/>
+   </ImageView>
+   <Label fx:id="score" layoutX="481.0" layoutY="184.0" prefHeight="32.0" prefWidth="99.0" text="Счет: 0"
+          textFill="WHITE">
+      <font>
+         <Font size="20.0"/>
+      </font>
+   </Label>
+   <ImageView fitHeight="32.0" fitWidth="128.0" layoutX="450.0" layoutY="328.0" onMouseClicked="#newGame"
+              pickOnBounds="true" preserveRatio="true">
+      <Image url="@images/new-game.png"/>
+   </ImageView>
+</AnchorPane>
