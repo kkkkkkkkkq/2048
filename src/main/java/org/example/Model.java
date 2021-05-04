@@ -136,6 +136,7 @@ public class Model {
 
     private int[] ifNeedSum(int[] array, Direction direction) {
         int length = array.length;
+        int[] newArray = new int[length];
 
         switch (direction) {
             case UP:
@@ -146,6 +147,14 @@ public class Model {
                         counter += array[i];
                         array[i + 1] = 0;
                         i++;
+                    }
+                }
+
+                int index = 0;
+                for (int i = 0; i < length - 1; i++) {
+                    if (array[i] != 0) {
+                        newArray[index] = array[i];
+                        index++;
                     }
                 }
                 break;
@@ -161,10 +170,18 @@ public class Model {
                         i--;
                     }
                 }
+
+                int index = length - 1;
+                for (int i = length - 1; i >= 0; i--) {
+                    if (array[i] != 0) {
+                        newArray[index] = array[i];
+                        index--;
+                    }
+                }
                 break;
             }
         }
-        return array;
+        return newArray;
     }
 
     private void setLine(int y, int[] line) {
