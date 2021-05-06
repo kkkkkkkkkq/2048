@@ -151,7 +151,7 @@ public class Model {
                 }
 
                 int index = 0;
-                for (int i = 0; i < length - 1; i++) {
+                for (int i = 0; i <= length - 1; i++) {
                     if (array[i] != 0) {
                         newArray[index] = array[i];
                         index++;
